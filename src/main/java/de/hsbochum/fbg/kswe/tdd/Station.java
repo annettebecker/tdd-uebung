@@ -2,6 +2,8 @@
 package de.hsbochum.fbg.kswe.tdd;
 
 import com.vividsolutions.jts.geom.Point;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -11,10 +13,12 @@ public class Station {
     
     private Point location;
     private String name;
+    private List <TimeSeries> timeSeries;
 
     public Station(Point location, String name) {
         this.location = location;
         this.name = name;
+        timeSeries = new ArrayList <>();
     }
     
     
@@ -24,6 +28,14 @@ public class Station {
         return dist;
     }
     
+    
+    public void addTimeSeries(TimeSeries ts){
+        timeSeries.add(ts);
+    }
+    
+    public List getTimeSeries(){
+        return timeSeries;
+    }
 
     public Point getLocation() {
         return location;
