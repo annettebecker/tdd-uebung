@@ -16,6 +16,14 @@ public class Station {
         this.location = location;
         this.name = name;
     }
+    
+    
+    public double calculateDistance(Station s2){
+        double dist = Math.sqrt( Math.pow(this.getLocation().getX()-s2.getLocation().getX(), 2) + 
+                            Math.pow(this.getLocation().getY()-s2.getLocation().getY(), 2));
+        return dist;
+    }
+    
 
     public Point getLocation() {
         return location;
