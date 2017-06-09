@@ -6,6 +6,7 @@ package de.hsbochum.fbg.kswe.tdd.orders;
  * @author <a href="mailto:m.rieke@52north.org">Matthes Rieke</a>
  */
 public class Order {
+
     
     private final Customer customer;
     private final int priority;
@@ -28,5 +29,11 @@ public class Order {
     public Product getProduct() {
         return product;
     }
+    
+    @Override
+    public String toString() {
+        return "Order{" + "customer=" + customer + ", priority=" + priority + ", product=" + product + '}';
+    }
+    
 
 }
